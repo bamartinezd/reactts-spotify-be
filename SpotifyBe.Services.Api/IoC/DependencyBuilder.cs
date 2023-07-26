@@ -1,6 +1,7 @@
 ﻿using SpotifyBe.Domain.Contracts;
 using SpotifyBe.Domain.Entities;
 using SpotifyBe.Infraestructure.DataAccess.Repositories;
+using SpotifyBe.Services.Api.Auth;
 
 namespace SpotifyBe.Services.Api.IoC
 {

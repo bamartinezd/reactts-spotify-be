@@ -1,3 +1,4 @@
+using SpotifyBe.Services.Api.Auth;
 using SpotifyBe.Services.Api.IoC;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,7 +12,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.DependencyInjection();
 builder.Services.CofigureCors();
 
-builder.Configuration.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+builder.Services.AddScoped<SpotifyAuthClient>(provider => new SpotifyAuthClient(builder.Configuration["AppSettings:apiUrl"], builder.Configuration["AppSettings:clientId"], builder.Configuration["AppSettings:clientSecret"]));
+
+//builder.Configuration.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+
 
 var app = builder.Build();
 

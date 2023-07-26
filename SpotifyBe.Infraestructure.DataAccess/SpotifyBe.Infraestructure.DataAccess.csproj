@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SpotifyBe.Domain.Contracts\SpotifyBe.Domain.Contracts.csproj" />
     <ProjectReference Include="..\SpotifyBe.Domain.Entities\SpotifyBe.Domain.Entities.csproj" />
   </ItemGroup>
